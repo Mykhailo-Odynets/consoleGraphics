@@ -1,6 +1,6 @@
 ﻿using consoleGraphics;
 
-Graphics graphics = new Graphics();
+Graphics graphics = new Graphics(Console.LargestWindowWidth, Console.LargestWindowHeight, new char[] { 'T', 'd' });
 
 
 graphics.Start();

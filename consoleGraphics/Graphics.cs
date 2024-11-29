@@ -24,7 +24,8 @@ namespace consoleGraphics
             }
             if (symbols == null)
             {
-                symbols = new char[] { ' ', '.', 'a', '@'};
+                symbols = new char[] { '.', 'a', '@'};
+                //symbols = new char[] { 'T', 'd' };
             }
             Symbols = symbols;
             Width = width;
@@ -68,7 +69,7 @@ namespace consoleGraphics
             while (true)
             {
                 Point currentPoint;
-                for (int x = 0; x < 1; x++)
+                for (int x = 0; x < BufferSize / Width; x++)
                 {
                     int i = 0;
                     do
@@ -97,9 +98,9 @@ namespace consoleGraphics
                     }
                 }
 
-                ClearBuffer();
+                //ClearBuffer();
                 DrawBuffer();
-                Thread.Sleep(50);
+                //Thread.Sleep(10);
             }
         }
     }
